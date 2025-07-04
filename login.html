@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Quiz Builder Logo" class="logo">
+    </header>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <div class="role-selection">
+            <button id="userBtn" class="active" onclick="selectRole('user')">User Login</button>
+            <button id="adminBtn" onclick="selectRole('admin')">Admin Login</button>
+        </div>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    
+    <div class="top-right-buttons">
+        <button onclick="location.href='about.html'" class="btn1">About Us</button>
+        <button onclick="location.href='contact.html'" class="btn1">Contact Us</button>
+      </div>
+      
+  
+
+   <script src="login.js"></script>
+</body>
+</html>

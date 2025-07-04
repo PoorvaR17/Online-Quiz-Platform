@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color:#ccf8cc;
+    margin: 0;
+    padding: 0;
+}
+.login-container {
+    width: 300px;
+    margin: 80px auto;
+    padding: 50px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+input, button {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+}
+.role-selection button {
+    width: 48%;
+    background: #ddd;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.role-selection .active {
+    background: #4CAF50;
+    color: white;
+}
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background: #45a049;
+}
+.logo {
+    width: 200px; /* Adjust size as needed */
+    height: 150px; /* Maintain aspect ratio */
+    display: block;
+    position: absolute;
+    top: 10px; /* Adjust distance from the top */
+    left: 80px; /* Adjust distance from the left */
+    z-index: 10;  
+    
+}
+.nav-buttons {
+    margin-top: 20px;
+  }
+  
+  .top-right-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px; /* space between buttons */
+    z-index: 1000;
+  }
+  
+  .btn1 {
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .btn1:hover {
+    background-color: #45a049;
+  }
+  
+  
+  

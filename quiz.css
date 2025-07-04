@@ -1,0 +1,93 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ccf4cc;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.logo {
+    height: 60px;
+}
+
+/* Quiz Container Styles */
+.quiz-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.quiz-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Question Styles */
+#questionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Each question block */
+#questionContainer div {
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 4px solid #4CAF50;
+}
+
+/* Option labels */
+#questionContainer label {
+    display: block;
+    margin-top: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Submit button */
+button {
+    display: block;
+    margin: 30px auto 0;
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+.logo {
+    width: 200px; 
+    height: 150px; 
+    display: block;
+    position: absolute;
+    top: 10px; 
+    left: 80px; 
+    z-index: 10;  
+    
+
+} 
+#timer {
+    font-weight: bold;
+    text-align: right;
+    color: red;
+    margin-bottom: 10px;
+}
+
+

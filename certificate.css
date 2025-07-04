@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ccf8cc;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .result-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+  }
+  
+  .certificate-section {
+    margin-top: 20px;
+  }
+  
+  .certificate-preview {
+    background: white;
+    padding: 40px;
+    border: 10px solid #4CAF50;
+    max-width: 700px;
+    margin: 20px auto;
+    font-family: Georgia, serif;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  button {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #45a049;
+  }
+  

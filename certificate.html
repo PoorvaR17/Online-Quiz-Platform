@@ -1,0 +1,56 @@
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="certificate.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    
+<div id="certificateSection" class="certificate-section">
+    <h3>🎓 Your Certificate </h3>
+    <div id="certificateCanvas" class="certificate-preview">
+        <img src="logo.png" alt="Logo" class="cert-logo"> 
+      <h1>Certificate of Achievement</h1>
+      <p>This is to certify that</p>
+      <h2 id="certName">User Name</h2>
+      <p>has successfully completed the quiz</p>
+      <h3 id="certQuiz">Quiz Title</h3>
+      <p>with a score of <strong id="certScore">0</strong>%</p>
+      <p><em id="certDate">Date</em></p>
+    </div>
+    <button onclick="downloadCertificate()">📥 Download</button>
+  </div>
+
+  <script>
+    const scoreData = JSON.parse(localStorage.getItem("userScore"));
+    const certData = JSON.parse(localStorage.getItem("certificateData"));
+    const scoreDisplay = document.getElementById("scoreDisplay");
+
+    if (scoreData) {
+      scoreDisplay.textContent = scoreData.percentage;
+    }
+
+    if (certData) {
+      document.getElementById("certName").textContent = certData.name;
+      document.getElementById("certQuiz").textContent = certData.quiz;
+      document.getElementById("certScore").textContent = certData.percentage;
+      document.getElementById("certDate").textContent = "Date: " + certData.date;
+    }
+
+    async function downloadCertificate() {
+      const { jsPDF } = window.jspdf;
+      const canvas = await html2canvas(document.getElementById("certificateCanvas"));
+
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF("landscape", "px", [canvas.width, canvas.height]);
+      pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
+      pdf.save("Certificate.pdf");
+    }
+  </script>
+</body>
+</html>

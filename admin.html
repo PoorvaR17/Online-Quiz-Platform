@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Builder</title>
+    <link rel="stylesheet" href="admin2.css">
+</head>
+<body>
+    <header>
+        
+       
+        
+        <img src="logo.png" alt="Quiz Builder Logo" class="logo">
+    </header>
+  
+
+    <div class="quiz-builder">
+        
+        <button onclick="location.href='messages.html'" class="dashboard-btn">Go to Dashboard</button>
+        <h2>Create a New Quiz</h2>
+        <input type="text" id="quizTitle" placeholder="Quiz Title">
+
+        <h3>Add Questions</h3>
+        <input type="text" id="questionInput" placeholder="Enter your question">
+
+        <div id="optionsContainer">
+            <input type="text" class="option" placeholder="Option 1">
+            <input type="text" class="option" placeholder="Option 2">
+            <input type="text" class="option" placeholder="Option 3">
+            <input type="text" class="option" placeholder="Option 4">
+        </div>
+
+        <label for="correctOption">Correct Option:</label>
+        
+        
+<div id="correctOptionsContainer">
+    <label><input type="checkbox" class="correct-checkbox" value="0"> Option 1</label>
+    <label><input type="checkbox" class="correct-checkbox" value="1"> Option 2</label>
+    <label><input type="checkbox" class="correct-checkbox" value="2"> Option 3</label>
+    <label><input type="checkbox" class="correct-checkbox" value="3"> Option 4</label>
+</div>
+
+        <input type="number" id="questionMarks" placeholder="Marks for this question">
+
+
+        <button onclick="addQuestion()">Add Question</button>
+
+        <h3>Questions Preview</h3>
+        <ul id="questionsList"></ul>
+
+            <button onclick="saveQuiz()">Save Quiz</button>
+           
+       
+       
+            <h3>Existing Quizzes</h3>
+        <ul id="quizList"></ul>
+
+
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <h2>Edit Quiz</h2>
+        <label>Quiz Title:</label>
+        <input type="text" id="editQuizTitle">
+        <h3>Edit Questions</h3>
+        <div id="editQuestionsContainer"></div>
+        <button id="saveChangesBtn">Save Changes</button>
+        <button id="cancelBtn">Cancel</button>
+    </div>
+</div>
+
+       
+         
+        <div id="quizList"></div>
+    </div>
+    <script src="admin.js"></script>   
+    <script>
+        document.getElementById("saveChangesBtn").addEventListener("click", saveEditedQuiz);
+        document.getElementById("cancelBtn").addEventListener("click", closeModal);
+
+        function closeModal() {
+            document.getElementById("editModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
+
+
+
+
